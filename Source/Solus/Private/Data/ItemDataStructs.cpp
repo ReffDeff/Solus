@@ -3,10 +3,4 @@
 
 #include "Data/ItemDataStructs.h"
 
-ItemDataStructs::ItemDataStructs()
-{
-}
 
-ItemDataStructs::~ItemDataStructs()
-{
-}
