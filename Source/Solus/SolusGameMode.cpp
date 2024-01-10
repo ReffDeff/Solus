@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SolusGameMode.h"
-#include "SolusCharacter.h"
+#include "Character/SolusCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 ASolusGameMode::ASolusGameMode()
