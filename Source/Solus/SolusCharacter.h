@@ -44,6 +44,9 @@ class ASolusCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Character)
+	float Health;
+
 public:
 	ASolusCharacter();
 	
