@@ -49,7 +49,7 @@ public:
 
 	UItemBase* CreateItemCopy();
 
-	FORCEINLINE float GetItemStackWeight() const {return Quantity * NumericData.Weight;};
+	FORCEINLINE float GetItemTotalWeight() const {return Quantity * NumericData.Weight;};
 	
 protected:	
 };
