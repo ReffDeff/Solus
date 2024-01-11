@@ -23,7 +23,8 @@ enum class EItemType : uint8
 	Spell UMETA(DisplayName = "Spell"),
 	Food UMETA(DisplayName = "Food"),
 	QuestItem UMETA(DisplayName = "QuestItem"),
-	Mundane UMETA(DisplayName = "Mundane")
+	Mundane UMETA(DisplayName = "Mundane"),
+	Book UMETA(DisplayName = "Book"),
 };
 
 USTRUCT()
