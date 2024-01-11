@@ -76,6 +76,9 @@ struct FItemNumericData
 
 	UPROPERTY(EditAnywhere)
 	bool bIsStackable;
+
+	UPROPERTY(EditAnywhere)
+	bool bIsUsable;
 	
 };
 

@@ -18,7 +18,7 @@ public:
 	//===================================================
 	
 	UPROPERTY(VisibleAnywhere, Category= "Item Data", meta = (UIMin = 1, UIMax = 100))
-	int32 Quantity;
+	int32 Count;
 	
 	UPROPERTY(EditAnywhere, Category= "Item Data")
 	FName ID;
@@ -49,7 +49,7 @@ public:
 
 	UItemBase* CreateItemCopy();
 
-	FORCEINLINE float GetItemTotalWeight() const {return Quantity * NumericData.Weight;};
+	FORCEINLINE float GetItemTotalWeight() const {return Count * NumericData.Weight;};
 	
 protected:	
 };
