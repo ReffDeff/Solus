@@ -96,6 +96,9 @@ struct FItemData : public FTableRowBase
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, Category= "Item Data")
+	FName ID;
+
+	UPROPERTY(EditAnywhere, Category= "Item Data")
 	EItemType ItemType;
 
 	UPROPERTY(EditAnywhere, Category= "Item Data")
@@ -109,7 +112,8 @@ struct FItemData : public FTableRowBase
 
 	UPROPERTY(EditAnywhere, Category= "Item Data")
 	FItemNumericData NumericData;
-
+	
 	UPROPERTY(EditAnywhere, Category= "Item Data")
 	FItemAssetData AssetData;
+	
 };
