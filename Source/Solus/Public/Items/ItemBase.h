@@ -7,6 +7,8 @@
 #include "ItemBase.generated.h"
 
 
+class ASolusCharacter;
+
 UCLASS()
 class SOLUS_API UItemBase : public UObject
 {
@@ -16,6 +18,9 @@ public:
 	//===================================================
 	// PROPERTIES & VARIABLES
 	//===================================================
+
+	//UPROPERTY()
+	//UInventoryComponent* OwningComponent
 	
 	UPROPERTY(VisibleAnywhere, Category= "Item Data", meta = (UIMin = 1, UIMax = 100))
 	int32 Quantity;
@@ -47,9 +52,26 @@ public:
 
 	UItemBase();
 
-	UItemBase* CreateItemCopy();
+	UItemBase* CreateItemCopy() const;
 
+	UFUNCTION(Category="Item")
 	FORCEINLINE float GetItemStackWeight() const {return Quantity * NumericData.Weight;};
 	
-protected:	
+	UFUNCTION(Category="Item")
+	FORCEINLINE float GetItemSingleWeight() const {return NumericData.Weight;};
+	
+	UFUNCTION(Category="Item")
+	FORCEINLINE bool IsFullItemStack() const {return Quantity == NumericData.MaxStackSize;};
+
+	UFUNCTION(Category="Item")
+	void SetQuantity(const int32 NewQuantity);
+
+	UFUNCTION(Category="Item")
+	virtual void Use(ASolusCharacter* Character);
+	
+protected:
+	bool operator==(const FName& OtherID)
+	{
+		return ID==OtherID;
+	}
 };
